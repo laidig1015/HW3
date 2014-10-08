@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title Rotten Potatoes!
+    %title Allaa's Rotten Potatoes!
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -9,6 +9,7 @@
   %body
     %h1.title Rotten Potatoes!
     #main
+      = button_to 'Signup/ Login', new_user_path, :method => :get
       - if flash[:notice]
         #notice.message= flash[:notice]
       - elsif flash[:warning]
